@@ -6,13 +6,13 @@ POT_FILE := messages.pot
 default:
 	@echo Usage: make [target]
 	@echo Targets:
-	@echo "  all            : Constructs the program."
+	@echo "  program        : Constructs the program."
 	@echo "  extractstrings : Extracts localization strings."
-	@echo "  translate      : Init translation to Spanish."
+	@echo "  translate      : Init translation to Spanish (*.po file should be translated)."
 	@echo "  compile-po     : Compile translations file."
 	@echo "  install-po     : Installs translations."
 
-all:
+program:
 	g++ -o $(EXE) $(SRCS)
 
 extractstrings:
