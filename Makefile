@@ -2,6 +2,7 @@
 EXE := gettext-test
 SRCS := main.cpp
 POT_FILE := messages.pot
+TRANSLATIONS := "Spanish Translations"
 
 default:
 	@echo Usage: make [target]
@@ -16,7 +17,7 @@ program:
 	g++ -o $(EXE) $(SRCS)
 
 extractstrings:
-	xgettext $(SRCS) --package-name "$(EXE) Spanish Translations" --package-version 1.0 --copyright-holder "HP CDS" --keyword=_ --output=$(POT_FILE)
+	xgettext $(SRCS) --package-name "$(EXE) $(TRANSLATIONS)" --package-version 1.0 --copyright-holder "DLG" --keyword=_ --output=$(POT_FILE)
 
 translate:
 	msginit --locale=es_ES --input=$(POT_FILE) --output-file=$(EXE).po
