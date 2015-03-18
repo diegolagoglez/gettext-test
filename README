@@ -7,10 +7,11 @@ Program takes LANG environment variable to show translated strings. If
 not translated strings found, it uses English. In order to test if
 Spanish is working, launch it as:
 
-LANG=es_ES ./gettext-test
+LANG=es_ES.utf-8 ./gettext-test
 
 Localization files for this program should be saved in:
 
 ./locale/es_ES/LC_MESSAGES
 
 Folder is relative to the folder the program is launched.
+
