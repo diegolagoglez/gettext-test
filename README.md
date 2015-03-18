@@ -1,4 +1,4 @@
-# Project to test translate (localization) toolkit: gettext
+# Project to test `gettext` localization toolkit
 
 ## Compiling
 
@@ -8,7 +8,18 @@ In order to compile this utility, use `make`:
 user@box ~/projects/gettext-test $ make program
 ```
 
-Type `make` to get help about building the translations strings.
+Type `make` to get help about building the translations strings:
+
+```bash
+user@box ~/projects/gettext-test $ make
+Usage: make [target]
+Targets:
+  program        : Constructs the program.
+  extractstrings : Extracts localization strings.
+  translate      : Init translation to Spanish (\*.po file should be translated).
+  compile-po     : Compile translations file.
+  install-po     : Installs translations.
+```
 
 Source code is in English. Make command starts translation into Spanish
 (but must be translated manually and then compiled and then installed).
@@ -19,7 +30,9 @@ Program takes LANG environment variable to show translated strings. If
 not translated strings found, it uses English. In order to test if
 Spanish is working, launch it as:
 
-`LANG=es_ES.utf-8 ./gettext-test`
+```bash
+user@box ~/projects/gettext-test $ LANG=es_ES.utf-8 ./gettext-test
+```
 
 Localization files for this program should be saved in:
 
